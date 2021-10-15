@@ -1,0 +1,153 @@
+/*
+- Very dark blue (main background): hsl(233, 47%, 7%)
+- Dark desaturated blue (card background): hsl(244, 38%, 16%)
+- Soft violet (accent): hsl(277, 64%, 61%)
+
+### Neutral
+
+- White (main heading, stats): hsl(0, 0%, 100%)
+- Slightly transparent white (main paragraph): hsla(0, 0%, 100%, 0.75)
+- Slightly transparent white (stat headings): hsla(0, 0%, 100%, 0.6)
+
+font-family: 'Inter', sans-serif; 400,700
+font-family: 'Lexend Deca', sans-serif; 400
+
+*/
+:root {
+    --very-dark-blue: hsl(233, 47%, 7%); 
+    --dark-desaturated-blue: hsl(244, 38%, 16%);
+    --soft-violet: hsl(277, 64%, 61%);
+
+    --g-1st: hsla(277, 89%, 45%, 0.65);
+    --g-2nd: rgba(76, 28, 109, 0.5);
+
+    --white: hsl(0, 0%, 100%);
+    --slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+    --slightly-more-transparent-white: hsla(0, 0%, 100%, 0.6);
+
+    --main-font: 'Inter', sans-serif;
+    --secondary-font: 'Lexend Deca', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img {
+    width: 100%;
+}
+
+body {
+    background-color: var(--very-dark-blue); 
+    color: white;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+}
+.cart {
+    background-color: var(--dark-desaturated-blue);
+    width: 80vw;
+    height: 93vh;
+    margin: auto;
+    border-radius: 10px;
+    
+}
+.img-sec {
+    height: 13rem;
+    background-image: linear-gradient(to bottom, var(--g-1st), var(--g-2nd)), url('./images/image-header-mobile.jpg');
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.info {
+    padding: 10px;
+}
+
+.title {
+    font-family: var(--main-font);
+    font-weight: 700;
+    margin: 20px auto 30px;
+
+}
+.title span {
+    color:var(--soft-violet);
+}
+.disc-text {
+    font-family: var(--main-font);
+    font-weight: 200;
+    font-size: 15px;
+    margin-bottom: 30px;
+    color: var(--slightly-more-transparent-white);
+}
+.stat {
+    margin: 25px auto;
+}
+.stat h3 {
+    font-family: var(--main-font);
+    font-weight: 700;
+
+}
+.stat p {
+    font-family: var(--secondary-font);
+    color: var(--slightly-more-transparent-white);
+    font-size: 13px;
+}
+
+@media (min-width: 720px) {
+    .cart {
+        width: 60vw;
+        height: 25rem;
+        display: flex;
+        flex-direction: row-reverse;
+        overflow: hidden;
+    }
+    .img-sec {
+        background-image: linear-gradient(to bottom, var(--g-1st), var(--g-2nd)), url('./images/image-header-desktop.jpg');
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        border-radius: 0px 10px 10px 0;
+    }
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: center;
+        padding: 3rem;
+        text-align: left;
+    }
+    .disc-text {
+        text-align: left;
+        margin-top:-12px
+    }
+    .stat {
+        display: inline-block;
+        margin-right: 20px
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Frontend mentor style */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
